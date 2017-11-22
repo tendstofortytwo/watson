@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	.topbar
+		img(src='/images/Watson-Logo.svg').logo
+		form(action='/q/' + searchType, method='get').search
+			.input-container(data-placeholder=' ')
+				input(type='text', name='term', placeholder='Search term', value=searchTerm, autocomplete='off')
+				a(href='#', class='submit')
+					img(src='/images/MagnifyingGlass.svg')
+			.suggestions-list
+		div.spacer
+		a.bundles-link(href='/bundles') My Pinboards
+	.bottom-section
+		div.results-container
+			each result in searchResults
+				a(href=result.url).result
+					div.result-title
+						h1= result.name
+						div.url= result.displayUrl
+					div.snippet= result.snippet
+					img.add(src='/images/star.png', data-link=result.url, data-title=result.name)
+		div.iframe-container
+			div.iframe-title
+			div.iframe-close &times;
+			iframe(src='data:text/html, ')
+	div.links-container
+		.saved-links-container
+		form
+			input(required, id='bundle-title', placeholder='Name pinboard...')
+			button.save(type='submit') Save Pinboard
+	div.links-caller
+		img(src='/images/pin.png')
+		div.links-count 0
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	script(src='/javascripts/index.js')
+	script(src='/javascripts/search.js')

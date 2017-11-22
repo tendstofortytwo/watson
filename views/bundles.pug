@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	.topbar
+		img(src='/images/Watson-Logo.svg').logo
+		form(action='/q/' + searchType, method='get').search
+			.input-container(data-placeholder=' ')
+				input(type='text', name='term', placeholder='Search term', autocomplete='off')
+				a(href='#', class='submit')
+					img(src='/images/MagnifyingGlass.svg')
+			.suggestions-list
+		div.spacer
+	div.bundles-page
+		h1= searchTerm
+		div.bundles-container
+			each bundle in bundles
+				div.links-bundle
+					h2.title= bundle.title
+					each link in bundle.links
+						a.saved-link(href=link.url).bundled
+							div.saved-title= link.title
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	script(src='/javascripts/index.js')
+	script(src='/javascripts/bundles.js')

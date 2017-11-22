@@ -1,0 +1,15 @@
+- var title = title || 'Watson';
+doctype html
+html
+	head
+		if searchTerm
+			title= searchTerm + ' | ' + title
+		else
+			title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/fonts/fonts.css')
+	body
+		block content
+	footer
+		| Made with &hearts; by Code Warriors. 
+		a(href='/about') Learn more.

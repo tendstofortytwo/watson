@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	div.center-vertical
+		img(src='/images/Watson-Logo.svg').logo
+		form(action='/q/' + searchType, method='get').search
+			.input-container(data-placeholder=' ')
+				input(type='text', name='term', placeholder='Search term', autocomplete='off')
+				a(href='#', class='submit')
+					img(src='/images/MagnifyingGlass.svg')
+			.suggestions-list
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	script(src='/javascripts/index.js')

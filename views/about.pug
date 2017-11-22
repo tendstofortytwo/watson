@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	header
+		img.logo(src='/images/Watson-Logo.svg')
+
+
+
+	section#main.hidden
+		div.text-container
+			h1 Searching Made Elementary.
+			p Watson is a research-based search engine that lets you organize related searches.
+		div.image-container
+			img.screenshot(src='/images/watson-screenshot.png')
+
+
+
+	section#bundles.hidden
+		<div class="links-bundle"><h2 class="title">Exun Clan</h2><a class="saved-link bundled" href="http://www.exunclan.com/"><div class="saved-title">Exun Clan</div></a><a class="saved-link bundled" href="http://www.lnexun.com/"><div class="saved-title">ln(exun) | Natural log of Exun – Computer club of DPS RK Puram</div></a><a class="saved-link bundled" href="https://m.facebook.com/ExunClan/"><div class="saved-title">Exun Clan - Facebook</div></a><a class="saved-link bundled" href="http://www.youtube.com/channel/UCU-5ewpvCmFOfptC9Lzc42Q"><div class="saved-title">Exun Clan - YouTube</div></a><a class="saved-link bundled" href="https://twitter.com/exunclan"><div class="saved-title">Exun Clan (@exunclan) | Twitter</div></a></div>
+		h1 Introducing Pinboards
+		p We know it's hard to keep track of all your hard work, hence Pinboards. Pinboards make it easy to pin relevant links together, and then access them later at your convenience.
+
+
+
+	section#preview.hidden
+		div.image-container
+			img.screenshot(src='/images/watson-preview.png')
+		div.text-container
+			h1 Look Before You Leap
+			p Watson is the first search engine with In-Page Previews, which allows you to de-clutter your tabs by previewing links before you commit to clicking on them.
+
+
+
+	section#video
+		div.video
+			img(src='https://img.youtube.com/vi/j31yi0M4xrM/maxresdefault.jpg')
+			div.text-container
+				a.play-button
+
+
+	section#try.hidden
+		h1 Try It Out
+		p Watson is now online, and available to use for all. Make your searches elementary today.
+
+		a.button(href='/') Visit Watson &rarr;
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://www.youtube.com/player_api"></script>
+	script(src='/javascripts/about.js')
