@@ -2,7 +2,7 @@
 
 _By Code Warriors_
 
-Live at: [https://watson.nsood.in](https://watson.nsood.in)
+Live at: [http://watson.nsood.in](http://watson.nsood.in)
 
 To build and run locally:
 
