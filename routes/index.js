@@ -17,7 +17,7 @@ router.get('/q/text', function(req, res, next) {
 			hostname: 'api.cognitive.microsoft.com',
 			path: '/bing/v7.0/search?q=' + encodeURIComponent(req.query.term),
 			headers: {
-				'Ocp-Apim-Subscription-Key': '090d03f5dbf54bc5a91e659b644a5678'
+				'Ocp-Apim-Subscription-Key': '1a051aaffec8403c81462b9efee1bdf9'
 			}
 		}, function(apiResponse) {
 			var body = '';
