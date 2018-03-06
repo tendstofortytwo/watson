@@ -128,7 +128,7 @@ router.get('/suggest', function(req, res, next) {
 			hostname: 'api.cognitive.microsoft.com',
 			path: '/bing/v7.0/Suggestions?mkt=en-IN&q=' + encodeURIComponent(req.query.term),
 			headers: {
-				'Ocp-Apim-Subscription-Key': '1a051aaffec8403c81462b9efee1bdf9'
+				'Ocp-Apim-Subscription-Key': '4823b3c600f2426e8c7a0721d86a235d'
 			}
 		}, function(apiResponse) {
 			var body = '';
