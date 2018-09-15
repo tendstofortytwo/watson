@@ -3,6 +3,7 @@ var router = express.Router();
 var https = require('https');
 var http = require('http');
 var url = require('url');
+var api = require('./api');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -128,7 +129,7 @@ router.get('/suggest', function(req, res, next) {
 			hostname: 'api.cognitive.microsoft.com',
 			path: '/bing/v7.0/Suggestions?mkt=en-IN&q=' + encodeURIComponent(req.query.term),
 			headers: {
-				'Ocp-Apim-Subscription-Key': '4823b3c600f2426e8c7a0721d86a235d'
+				'Ocp-Apim-Subscription-Key': api.key
 			}
 		}, function(apiResponse) {
 			var body = '';
