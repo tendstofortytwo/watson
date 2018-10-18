@@ -88,7 +88,7 @@ function loadURL(link, count, res) {
 				});
 
 				resp.on('end', function() {
-					var domain = parse.protocol + '//' + parse.host + '/';
+					var domain = parse.protocol + '//' + parse.host;
 			
 					var reg1 = new RegExp('src="', 'g');
 					content = content.replace(reg1, 'src="' + domain);
