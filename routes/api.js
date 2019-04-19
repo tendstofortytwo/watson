@@ -1,3 +1,3 @@
 module.exports = {
-	key: '02ef4b4fb99048e19678d1cce030e582'
+	key: '24946ad28a0d46a881b2981f0cb3c137'
 };
