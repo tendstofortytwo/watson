@@ -14,7 +14,7 @@ router.get('/q/text', function(req, res, next) {
 	if(req.query.term) {
 		var apiRequest = https.request({
 			method: 'GET',
-			hostname: 'api.cognitive.microsoft.com',
+			hostname: api.endpoint,
 			path: '/bing/v7.0/search?q=' + encodeURIComponent(req.query.term),
 			headers: {
 				'Ocp-Apim-Subscription-Key': api.key
@@ -28,6 +28,7 @@ router.get('/q/text', function(req, res, next) {
 
 			apiResponse.on('end', function() {
 				body = JSON.parse(body);
+				console.log(body);
 				res.render('search', {
 					searchResults: body.webPages.value,
 					searchTerm: body.queryContext.originalQuery,
